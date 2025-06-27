@@ -1,0 +1,57 @@
+# SBT
+target/
+project/target/
+project/project/
+dist/*
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Scala IDE
+.scala_dependencies
+.worksheet
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Spark
+spark-warehouse/
+derby.log
+metastore_db/
+
+# General
+*.class
+*.jar
+!project/*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+.bsp/
