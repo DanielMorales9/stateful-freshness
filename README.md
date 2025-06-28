@@ -1,6 +1,14 @@
 # Stateful Event Processor
 
-A Scala-Spark application that ingests events via socket and performs stateful processing to keep only the latest timestamp per event type.
+It's a sophisticated Spark Structured Streaming application that demonstrates stateful processing for event freshness tracking.
+
+1. Ingests from two sockets (9999/9998) with different schemas - one for events with processing_time+id, another for source_time only
+2. Maintains state per event name using flatMapGroupsWithState to track latest processing_time, source_time, and computed freshness_time
+3. Calculates freshness as the minimum of available timestamps, showing data latency/delay
+4. Outputs only events with IDs every 15 seconds, filtering pure timing events
+
+The stateful processing is the key - it keeps track of the latest timestamps across micro-batches and computes freshness metrics, which is useful for monitoring data pipeline health and SLA
+compliance.
 
 ## Running the Application
 

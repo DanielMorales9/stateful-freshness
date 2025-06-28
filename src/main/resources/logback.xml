@@ -5,8 +5,8 @@
         </encoder>
     </appender>
 
-    <logger name="com.revolut" level="WARN"/>
     <logger name="org.apache.spark" level="WARN"/>
+    <logger name="StatefulEventProcessor" level="INFO"/>
 
     <root level="WARN">
         <appender-ref ref="STDOUT"/>
