@@ -31,7 +31,7 @@ tmux send-keys -t demo:0.2 "nc -lk 9998" Enter
 ```
 # 3. Attach to the tmux session to view all processes:
 ```bash
-
+tmux attach-session -t demo
 ```
 
 4. Type JSON events in the netcat panes to send them to the application (use panes 1 and 2 for ports 9999/9998):
